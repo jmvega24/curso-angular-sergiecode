@@ -1,0 +1,13 @@
+<div style="border: solid  blue;">
+    <h3>PadreComponent</h3>
+
+    <p>
+        El padre dice: {{ mensajeDesdeElPadre }} <br>
+        <button (click)="enviarMensajeDesdeElPadre()">Enviar</button>
+    </p>
+    <p>El hijo responde: <strong>{{ recibePadre }}</strong></p>
+
+    <app-hijo [recibeHijo]="mensajeDesdeElPadre" (enviarMensajeDesdeElHijo)="capturarMensajeDelHijo($event)"></app-hijo>
+
+
+</div>
