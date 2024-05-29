@@ -1,13 +1,23 @@
 <div style="border: solid  blue;">
     <h3>PadreComponent</h3>
+    <h4>(@Input / @Output)</h4>
+
+    <p>El padre dice: {{ mensajeDesdeElPadre }}</p>
+    
+    <p>El padre recibe del hijo: <strong>{{ mensajeDesdeElHijo }}</strong></p>
+
+    <button (click)="enviarMensajeDesdeElPadre()">Enviar mensaje del padre...</button>
 
     <p>
-        El padre dice: {{ mensajeDesdeElPadre }} <br>
-        <button (click)="enviarMensajeDesdeElPadre()">Enviar</button>
+        <app-hijo [inputHijo]="mensajeDesdeElPadre" (outputHijo)="capturarMensajeDelHijo($event)"></app-hijo>
     </p>
-    <p>El hijo responde: <strong>{{ recibePadre }}</strong></p>
-
-    <app-hijo [recibeHijo]="mensajeDesdeElPadre" (enviarMensajeDesdeElHijo)="capturarMensajeDelHijo($event)"></app-hijo>
-
+    
+    
+    <h4>(Services)</h4>
+    Nombre del hermano mayor: <strong>{{ nombre }}</strong>
+    <p>
+        <button type="button" (click)="saludar()">Saludar</button>
+        <button type="button" (click)="preguntar()">Preguntar por hijo</button>
+    </p>
 
 </div>

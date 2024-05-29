@@ -7,14 +7,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class HijoComponent {
 
-  @Input() recibeHijo? : string;
+  @Input() inputHijo? : string;
 
-  @Output() enviarMensajeDesdeElHijo = new EventEmitter<string>();
+  @Output() outputHijo = new EventEmitter<string>();
 
   mensajeHijo? : string;
   enviarMensaje() {
-    this.mensajeHijo = "Hola padre, muy bien. ¿Y tú?";
-    this.enviarMensajeDesdeElHijo.emit(this.mensajeHijo);
+    this.mensajeHijo = "Hola padre, muy bien, gracias. ¿Y tú?";
+    this.outputHijo.emit(this.mensajeHijo);
   }
 
 }

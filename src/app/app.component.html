@@ -1,14 +1,17 @@
-<h1>{{ title }}</h1>
+<h3>{{ title }}</h3>
 <div style="border: solid  yellow;">
-    <h3>AppComponent</h3>
+    <h4>AppComponent</h4>
 
     <div>
-        <p>Contador: {{ contador }}</p>
         <p>
-            <button (click)="decrementar()">-</button>
-            <button (click)="incrementar()">+</button></p>
+            Contador: {{ contador }}
+            <br>
+            <button (click)="decrementar()">-</button> ... <button (click)="incrementar()">+</button>
+        </p>
     </div>
 
     <app-padre></app-padre>
+    <br>
+    <app-hermano></app-hermano>
 
 </div>

@@ -1,11 +1,11 @@
 <div style="border: solid  red;">
-    <h3>HijoComponent</h3>
+    <h2>HijoComponent</h2>
+    <h3>(@Input / @Output)</h3>
+    
+    <p>El hijo recibe del padre: <strong>{{ inputHijo }}</strong></p>
 
-    <p>El hijo recibe del padre: <strong>{{ recibeHijo }}</strong></p>
+    <p>El hijo responde al padre: {{ mensajeHijo }}</p>
 
-    <p>
-        El hijo dice: {{ mensajeHijo }} <br>
-        <button (click)="enviarMensaje()">Enviar</button>
-    </p>
+    <button (click)="enviarMensaje()">Enviar mensaje del hijo</button>
 
 </div>
